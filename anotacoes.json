@@ -1,0 +1,87 @@
+Curso de Microservices com Spring Cloud: Circuit Breaker, Hystrix e API Gateway
+
+Faça esse curso de Java API e:
+- Use um API Gateway com Spring Zuul
+- Implemente a autenticação e autorização com token
+- Saiba como tratar erros em um sistema distribuído
+- Consiga uma alta disponibilidade com Bulkhead
+- Entenda Fallback e Circuit Breaker
+
+==========================================================================================================================================================================
+Aulas
+Fallback e Circuit Breaker Ver primeiro vídeo
+[ok	] Introdução
+[ok	] Projeto inicial do treinamento
+[ok	] Ambiente e versões
+[	] Circuit Breaker e Fallback
+[	] Implementando a solução
+[	] Timeout e Circuit Breaker
+[	] Circuit Breaker vs Fallback Method
+[	] Consolidando o seu conhecimento
+[	] O que aprendemos?
+
+Bulkhead com Hystrix
+[	] Projeto da aula anterior
+[	] O que é Bulkhead?
+[	] Processamento paralelo com microsserviços
+[	] Bulkhead na prática
+[	] Consolidando o seu conhecimento
+[	] O que aprendemos?
+
+Lidando com transação e erros
+[	] Projeto da aula anterior
+[	] Importação do novo serviço
+[	] Integração entre serviços
+[	] O que é a compra?
+[	] Tratando erros na integração
+[	] Orquestrador como cliente
+[	] Consolidando o seu conhecimento
+[	] O que aprendemos?
+
+API Gateway com Spring Zuul
+[	] Projeto da aula anterior
+[	] Introdução ao Zuul
+[	] Zuul vs Eureka
+[	] Zuul na prática
+[	] Integração entre o Zuul e o Eureka Server
+[	] Consolidando o seu conhecimento
+[	] O que aprendemos?
+
+Autenticação e autorização
+[	] Projeto da aula anterior
+[	] Introdução à autenticação
+[	] Identificando o usuário logado
+[	] Servidor de autenticação
+[	] Spring Security e Spring Cloud Oauth
+[	] Validando o token
+[	] Repassando o token
+[	] Feign interceptor
+[	] Consolidando o seu conhecimento
+[	] Projeto do curso
+[	] O que aprendemos?
+[	] Conclusão
+
+==========================================================================================================================================================================
+ Projeto inicial do treinamento
+
+O projeto inicial desde treinamento é o projeto implementado no treinamento anterior. Então, caso você tenha feito o treinamento anterior, pode prosseguir com o mesmo projeto.
+
+Caso você não tenha feito o treinamento anterior ou não tenha mais o projeto, você pode baixá-lo aqui.
+
+==========================================================================================================================================================================
+
+
+==========================================================================================================================================================================
+
+
+==========================================================================================================================================================================
+
+
+==========================================================================================================================================================================
+
+
+==========================================================================================================================================================================
+
+
+==========================================================================================================================================================================
+

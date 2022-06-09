@@ -1,0 +1,20 @@
+server:
+  port: 8888
+
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: C:\workspace\Alura\microservices-spring-cloud-circuit-breaker-api-gateway\microservices-repo
+
+#spring:
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/gerrysousa/spring-cloud-service-registry-config.git
+#          search-paths: microservices-repo
+#          default-label: main

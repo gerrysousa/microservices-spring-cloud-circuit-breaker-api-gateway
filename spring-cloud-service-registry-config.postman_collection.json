@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "10d9d93f-9ca0-44e2-99d1-ca2ec0302844",
+		"name": "spring-cloud-service-registry-config",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Loja",
+			"item": [
+				{
+					"name": "Loja - compra",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"itens\": [\r\n        {\r\n            \"id\": 1,\r\n            \"quantidade\": 5\r\n        },\r\n         {\r\n            \"id\": 2,\r\n            \"quantidade\": 1\r\n        }\r\n    ],\r\n    \"endereco\":{\r\n        \"rua\": \"Rua W\",\r\n        \"numero\": 123,\r\n        \"estado\": \"MG\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/compra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"compra"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fornecedor",
+			"item": [
+				{
+					"name": "Fornecedor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"itens\": [\r\n        {\r\n            \"id\":1,\r\n            \"quantidade\":5\r\n        },\r\n        {\r\n            \"id\":2,\r\n            \"quantidade\":5\r\n        }\r\n    ],\r\n    \"endereco\": {\r\n        \"rua\": \"Rua x\",\r\n        \"numero\":123,\r\n        \"estado\":\"GO\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/info/:estado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"info",
+								":estado"
+							],
+							"variable": [
+								{
+									"key": "estado",
+									"value": "MG"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fornecedor pedidos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"quantidade\": 5\r\n    },\r\n    {\r\n        \"id\": 2,\r\n        \"quantidade\": 5\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/pedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fornecedor produtos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"itens\": [\r\n        {\r\n            \"id\":1,\r\n            \"quantidade\":5\r\n        },\r\n        {\r\n            \"id\":2,\r\n            \"quantidade\":5\r\n        }\r\n    ],\r\n    \"endereco\": {\r\n        \"rua\": \"Rua x\",\r\n        \"numero\":123,\r\n        \"estado\":\"GO\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/produto/:estado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"produto",
+								":estado"
+							],
+							"variable": [
+								{
+									"key": "estado",
+									"value": "mg"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Eureka",
+			"item": [
+				{
+					"name": "Eureka app",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"itens\": [\r\n        {\r\n            \"id\":1,\r\n            \"quantidade\":5\r\n        },\r\n        {\r\n            \"id\":2,\r\n            \"quantidade\":5\r\n        }\r\n    ],\r\n    \"endereco\": {\r\n        \"rua\": \"Rua x\",\r\n        \"numero\":123,\r\n        \"estado\":\"GO\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8761/eureka/apps",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8761",
+							"path": [
+								"eureka",
+								"apps"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Config-Server",
+			"item": [
+				{
+					"name": "Config - Fornecedor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/fornecedor/default",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"fornecedor",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Config - Fornecedor PROD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/fornecedor/prod",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"fornecedor",
+								"prod"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
