@@ -24,9 +24,9 @@ Bulkhead com Hystrix
 [ok	] Projeto da aula anterior
 [ok	] O que é Bulkhead?
 [ok	] Processamento paralelo com microsserviços
-[	] Bulkhead na prática
-[	] Consolidando o seu conhecimento
-[	] O que aprendemos?
+[ok	] Bulkhead na prática
+[ok	] Consolidando o seu conhecimento
+[ok	] O que aprendemos?
 
 Lidando com transação e erros
 [	] Projeto da aula anterior
@@ -125,6 +125,42 @@ Os problemas gerados na integração da Loja com o Fornecedor
 A implementação do Circuit Breaker com Hystrix, limitando o tempo de processamento para 1 segundo
 Como funciona o Fallback Method
 O uso do Fallback para tratar a interrupção da Thread efetuada pelo Circuit Breaker
+
+
+==========================================================================================================================================================================
+- O que aprendemos?
+
+Nesta aula, vimos:
+
+Que o Hystrix executa uma gerência de um pool de threads
+A combinação de um volume alto de requisições para um único serviço de um microsserviço pode indisponibilizar as outras requisições
+Como funciona o Bulkhead Pattern
+Como implementar o Bulkhead Pattern com o Hystrix
+Como dividir as threads entre os serviços buscaCompa e realizaCompra
+A análise das threads gerenciadas pelo Hystrix.
+
+==========================================================================================================================================================================
+
+
+==========================================================================================================================================================================
+
+
+==========================================================================================================================================================================
+
+
+==========================================================================================================================================================================
+
+
+==========================================================================================================================================================================
+
+
+==========================================================================================================================================================================
+
+
+==========================================================================================================================================================================
+
+
+==========================================================================================================================================================================
 
 
 ==========================================================================================================================================================================
