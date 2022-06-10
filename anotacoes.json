@@ -13,12 +13,12 @@ Fallback e Circuit Breaker Ver primeiro vídeo
 [ok	] Introdução
 [ok	] Projeto inicial do treinamento
 [ok	] Ambiente e versões
-[	] Circuit Breaker e Fallback
-[	] Implementando a solução
-[	] Timeout e Circuit Breaker
-[	] Circuit Breaker vs Fallback Method
-[	] Consolidando o seu conhecimento
-[	] O que aprendemos?
+[ok	] Circuit Breaker e Fallback
+[ok	] Implementando a solução
+[ok	] Timeout e Circuit Breaker
+[ok	] Circuit Breaker vs Fallback Method
+[ok	] Consolidando o seu conhecimento
+[ok	] O que aprendemos?
 
 Bulkhead com Hystrix
 [	] Projeto da aula anterior
@@ -69,15 +69,62 @@ O projeto inicial desde treinamento é o projeto implementado no treinamento ant
 Caso você não tenha feito o treinamento anterior ou não tenha mais o projeto, você pode baixá-lo aqui.
 
 ==========================================================================================================================================================================
-
+<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>
+				spring-cloud-starter-netflix-hystrix
+			</artifactId>
+		</dependency>
 
 ==========================================================================================================================================================================
+Download JMeter:
+https://archive.apache.org/dist/jmeter/binaries/?C=M;O=D
 
+Executar JMeter:
+C:\rootFolder\apache-jmeter-5.4.3_src\apache-jmeter-5.4.3\bin\jmeter.bat
+
+
+Adicionar Thread group:
+Test Plan >> Add >> Threads Users >> Thread Group
+
+Add ouvinte:
+Thread Group >> Add >> Listener >> View Results Tree
+
+Add request:
+Thread Group >> Add >> Sample >> Http Request
+Body
+
+Add header:
+Http Request >> Add >> Config Element >> Http Header Manager
+--header 'Content-Type: application/json' \
+
+
+Executar sem Parar:
+Thread Group >> Loop Count >> marcar checkbox "infinto"
+
+Aumentar Threads :
+Thread Group >> Numero de Threads
+
+
+Add outro listener:
+Thread Group >> Add >> Listener >> Agregate Report
 
 ==========================================================================================================================================================================
+É possivel configurar o timeout do Hystrix.
 
+"HystrixCommandProperties.Setter().withExecutionTimeoutInMilliseconds(5000)"
 
 ==========================================================================================================================================================================
+- O que aprendemos?
+
+Nesta aula, vimos:
+
+O impacto na aplicação por problemas de lentidão ao consultar outros microsserviço
+Como funciona o Circuit Breaker
+Os problemas gerados na integração da Loja com o Fornecedor
+A implementação do Circuit Breaker com Hystrix, limitando o tempo de processamento para 1 segundo
+Como funciona o Fallback Method
+O uso do Fallback para tratar a interrupção da Thread efetuada pelo Circuit Breaker
 
 
 ==========================================================================================================================================================================
