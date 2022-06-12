@@ -50,8 +50,8 @@ API Gateway com Spring Zuul
 Autenticação e autorização
 [ok	] Projeto da aula anterior
 [ok	] Introdução à autenticação
-[	] Identificando o usuário logado
-[	] Servidor de autenticação
+[ok	] Identificando o usuário logado
+[ok	] Servidor de autenticação
 [	] Spring Security e Spring Cloud Oauth
 [	] Validando o token
 [	] Repassando o token
@@ -178,8 +178,11 @@ A integração do Zuul com o Eureka, para o descobrimento automático das instâ
 A alteração das requisições para os nossos microsserviços, com o uso do Zuul
 
 ==========================================================================================================================================================================
+Como os microsserviços identificam o usuário logado?
 
+Extraindo o token da requisição e consultando os dados do usuário no servidor de autenticação
 
+ Quando o usuário faz uma requisição para um serviço que demanda que o usuário esteja logado, no header da requisição, o usuário envia um token, que ele conseguiu previamente através do servidor de autenticação.
 ==========================================================================================================================================================================
 
 
