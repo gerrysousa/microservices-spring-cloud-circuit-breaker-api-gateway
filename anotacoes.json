@@ -31,8 +31,8 @@ Bulkhead com Hystrix
 Lidando com transação e erros
 [ok	] Projeto da aula anterior
 [ok	] Importação do novo serviço
-[	] Integração entre serviços
-[	] O que é a compra?
+[ok	] Integração entre serviços
+[ok	] O que é a compra?
 [	] Tratando erros na integração
 [	] Orquestrador como cliente
 [	] Consolidando o seu conhecimento
