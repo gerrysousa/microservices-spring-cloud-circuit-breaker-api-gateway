@@ -41,7 +41,7 @@ Lidando com transação e erros
 API Gateway com Spring Zuul
 [ok	] Projeto da aula anterior
 [ok	] Introdução ao Zuul
-[	] Zuul vs Eureka
+[ok	] Zuul vs Eureka
 [	] Zuul na prática
 [	] Integração entre o Zuul e o Eureka Server
 [	] Consolidando o seu conhecimento
@@ -150,6 +150,13 @@ O entendimento de que, com microsserviços, uma transação do usuário passa po
 Como tratar os erros na transação, marcando o que foi processado com o uso de estados
 
 ==========================================================================================================================================================================
+ Zuul vs Eureka
+
+Para que os nossos microsserviços se comuniquem entre si, eles fazem o uso do Eureka, tanto para se disponibilizarem como para descobrir instâncias de outros microsserviços. Qual a necessidade do Api Gateway, já que os nossos microsserviços se conhecem?
+
+R: Para que os usuários consigam acessar as funcionalidades implementadas em vários microsserviços, sem que esses tenham a inteligência de saber como encontrar os microsserviços
+
+Alternativa correta! Uma aplicação rodando no navegador, ou mesmo em um aplicativo móvel, não deveria ter a inteligência de se comunicar com o Eureka, nosso Service Discovery, para descobrir as instâncias disponíveis. Aliás, faz sentido expor o Eureka na internet? Acho que não.
 
 
 ==========================================================================================================================================================================
