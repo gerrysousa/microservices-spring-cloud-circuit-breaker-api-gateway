@@ -2,7 +2,8 @@
 	"info": {
 		"_postman_id": "10d9d93f-9ca0-44e2-99d1-ca2ec0302844",
 		"name": "spring-cloud-service-registry-config",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12863455"
 	},
 	"item": [
 		{
@@ -12,7 +13,13 @@
 					"name": "Loja - compra",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 42124ebb-d161-4a65-affc-a8af833da506",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"itens\": [\r\n        {\r\n            \"id\": 1,\r\n            \"quantidade\": 5\r\n        },\r\n         {\r\n            \"id\": 2,\r\n            \"quantidade\": 1\r\n        }\r\n    ],\r\n    \"endereco\":{\r\n        \"rua\": \"Rua W\",\r\n        \"numero\": 123,\r\n        \"estado\": \"MG\"\r\n    }\r\n}",
@@ -35,6 +42,26 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "GET Compra",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/compra/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"compra",
+								"2"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -48,7 +75,14 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 42124ebb-d161-4a65-affc-a8af833da506",
+								"type": "text",
+								"disabled": true
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"itens\": [\r\n        {\r\n            \"id\":1,\r\n            \"quantidade\":5\r\n        },\r\n        {\r\n            \"id\":2,\r\n            \"quantidade\":5\r\n        }\r\n    ],\r\n    \"endereco\": {\r\n        \"rua\": \"Rua x\",\r\n        \"numero\":123,\r\n        \"estado\":\"GO\"\r\n    }\r\n}",
@@ -83,7 +117,13 @@
 					"name": "Fornecedor pedidos",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 42124ebb-d161-4a65-affc-a8af833da506",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"quantidade\": 5\r\n    },\r\n    {\r\n        \"id\": 2,\r\n        \"quantidade\": 5\r\n    }\r\n]",
@@ -222,6 +262,159 @@
 							"path": [
 								"fornecedor",
 								"prod"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gateway",
+			"item": [
+				{
+					"name": "Get Routes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5555/actuator/routes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"actuator",
+								"routes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get fornecedor info by gateway",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 42124ebb-d161-4a65-affc-a8af833da506",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5555/fornecedor/info/:estado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"fornecedor",
+								"info",
+								":estado"
+							],
+							"variable": [
+								{
+									"key": "estado",
+									"value": "MG"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Get Token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "lojapwd",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "loja",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "scope",
+									"value": "web",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "joao",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "joaopwd",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8088/oauth/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by token",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8088/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"user"
 							]
 						}
 					},
