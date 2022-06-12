@@ -29,8 +29,8 @@ Bulkhead com Hystrix
 [ok	] O que aprendemos?
 
 Lidando com transação e erros
-[	] Projeto da aula anterior
-[	] Importação do novo serviço
+[ok	] Projeto da aula anterior
+[ok	] Importação do novo serviço
 [	] Integração entre serviços
 [	] O que é a compra?
 [	] Tratando erros na integração
