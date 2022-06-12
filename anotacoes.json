@@ -42,14 +42,14 @@ API Gateway com Spring Zuul
 [ok	] Projeto da aula anterior
 [ok	] Introdução ao Zuul
 [ok	] Zuul vs Eureka
-[	] Zuul na prática
-[	] Integração entre o Zuul e o Eureka Server
-[	] Consolidando o seu conhecimento
-[	] O que aprendemos?
+[ok	] Zuul na prática
+[ok	] Integração entre o Zuul e o Eureka Server
+[ok	] Consolidando o seu conhecimento
+[ok	] O que aprendemos?
 
 Autenticação e autorização
-[	] Projeto da aula anterior
-[	] Introdução à autenticação
+[ok	] Projeto da aula anterior
+[ok	] Introdução à autenticação
 [	] Identificando o usuário logado
 [	] Servidor de autenticação
 [	] Spring Security e Spring Cloud Oauth
@@ -160,10 +160,22 @@ Alternativa correta! Uma aplicação rodando no navegador, ou mesmo em um aplica
 
 
 ==========================================================================================================================================================================
+- Integração entre o Zuul e o Eureka Server
+Fizemos uma integração entre o Zuul e o Eureka Server. O que ganhamos com essa integração?
 
+O Zuul utiliza o Eureka para conhecer as instâncias dos microsserviços e, usando o Ribbon, fazer o balanceamento de carga das requisições dos usuários
+O Zuul utiliza o Eureka para conhecer as instâncias dos microsserviços e, usando o Ribbon, fazer o balanceamento de carga das requisições dos usuários
 
 ==========================================================================================================================================================================
+- O que aprendemos?
 
+Nesta aula, vimos:
+
+Como disponibilizar a nossa aplicação para serem acessadas por um cliente
+O uso do Api Gateway, para criar um único ponto de acesso à nossa aplicação
+O uso da implementação Zuul como Api Gateway do nosso sistema
+A integração do Zuul com o Eureka, para o descobrimento automático das instâncias disponíveis da nossa aplicação
+A alteração das requisições para os nossos microsserviços, com o uso do Zuul
 
 ==========================================================================================================================================================================
 
