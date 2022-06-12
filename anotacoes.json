@@ -54,11 +54,11 @@ Autenticação e autorização
 [ok	] Servidor de autenticação
 [ok	] Spring Security e Spring Cloud Oauth
 [ok	] Validando o token
-[	] Repassando o token
-[	] Feign interceptor
-[	] Consolidando o seu conhecimento
-[	] Projeto do curso
-[	] O que aprendemos?
+[ok	] Repassando o token
+[ok	] Feign interceptor
+[ok	] Consolidando o seu conhecimento
+[ok	] Projeto do curso
+[ok	] O que aprendemos?
 [	] Conclusão
 
 ==========================================================================================================================================================================
@@ -198,7 +198,17 @@ Bloquear todos os endpoints
         .authenticated();
   }
 ==========================================================================================================================================================================
+- O que aprendemos?
 
+Nesta aula, vimos:
+
+Como funciona a autenticação e autorização com microsserviços
+Como criar um servidor de autenticação com Spring Security e Spring Cloud OAuth2
+A implementação da integração entre o Spring Security e o Spring Cloud OAuth2
+Como gerar e validar tokens no servidor de autenticação
+A integração dos microsserviços com o servidor de autenticação
+Como repassar o token de autenticação através do Zuul
+A implementar um filtro do Feign para repassar o token do usuário nas chamadas para os microsserviços Fornecedor e Transportador
 
 ==========================================================================================================================================================================
 
